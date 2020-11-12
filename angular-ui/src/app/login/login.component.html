@@ -1,0 +1,36 @@
+
+<div class="page-login ">
+    <div class="ui centered grid container">
+      <div class="nine wide column">
+        <div class="center aligned ui">
+          <div class="content">
+          <div class="header item borderless">
+            <h1 class="ui header centered">
+                <img class="logo" src="assets/images/vimdos.png">
+            </h1>
+          </div>
+          <form class="ui form" >
+            <div class="field">
+              <label>Username</label>
+              <input type="text" name="user" placeholder="Enter your username here" #user>
+            </div>
+            <div class="field">
+              <label>Password</label>
+              <input type="password" name="pass" placeholder="Enter your password here" #pass>
+            </div>
+            <button class="ui primary labeled icon button" (click) = "getDetails(user,pass)">
+              <i class="unlock alternate icon"></i>
+              Login
+            </button>
+            <a class="item" routerLink = "/register">
+              <button class="ui right floated primary labeled icon button" (click) = "getDetails(user,pass)">
+                <i class="pencil alternate icon"></i>
+                  Register
+              </button>
+            </a>  
+          </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
