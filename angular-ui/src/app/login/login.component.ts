@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { DataService } from 'src/app/services/data.service';
+
 
 @Component({
   selector: 'app-login',
@@ -7,12 +10,26 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LoginComponent implements OnInit {
 
-  constructor() { }
-  getDetails(user: HTMLInputElement, pass: HTMLInputElement): boolean {
-    console.log(`Username: ${user.value} and Password: ${pass.value}`);
-    return false;
-   }
+  loginForm : FormGroup
+
+  constructor(private dataService : DataService) { }
+
   ngOnInit(): void {
+    this.loginForm = new FormGroup({
+      Username : new FormControl('' , [Validators.required]),
+      Password : new FormControl('' , [Validators.required])
+    });
+    
+  }
+
+  onSubmit(){
+    console.log(this.loginForm)
+    this.dataService.login(
+      this.loginForm.value.Username,
+      this.loginForm.value.Password
+    ).subscribe(result => {
+      console.log(result)
+  })
   }
 
 }

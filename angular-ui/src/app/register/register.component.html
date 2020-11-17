@@ -1,24 +1,24 @@
-<form class="ui form">
+<form class="ui form" [formGroup]="registrationForm" (ngSubmit)="onSubmit()">
     <div class="field">
       <label>First Name</label>
-      <input type="text" name="first-name" placeholder="First Name">
+      <input type="text" name="first-name" placeholder="First Name" formControlName = "FirstName">
     </div>
     <div class="field">
       <label>Last Name</label>
-      <input type="text" name="last-name" placeholder="Last Name">
+      <input type="text" name="last-name" placeholder="Last Name" formControlName = "LastName">
     </div>
     <div class = "fields">
         <div class="six wide field">
             <label>Roll Number</label>
-            <input type="text" name="rollno[number]" maxlength="12" placeholder="Eg:160118733169">
+            <input type="text" name="rollno[number]" maxlength="12" placeholder="Eg:160118733169" formControlName = "RollNo"> 
         </div>
         <div class="six wide field">
             <label>Colege Email ID</label>
-            <input type = "email" name = "email" placeholder="Eg:abc@xyz.com">
+            <input type = "email" name = "email" placeholder="Eg:abc@xyz.com" formControlName = "EmialId">
         </div>
         <div class="six wide field">
             <label>Mobile No</label>
-            <input type = "text" name = "mobileno" placeholder = "Eg.8181818181">
+            <input type = "text" name = "mobileno" placeholder = "Eg.8181818181" formControlName = "MobileNo">
         </div>
     </div>
     <div class="field">
@@ -27,7 +27,7 @@
     </div>
     <div class="field">
         <label>Confirm Password</label>
-        <input type = "password" name = "pswd" placeholder = "Confirm Password">
+        <input type = "password" name = "pswd" placeholder = "Confirm Password" formControlName = "Password">
     </div>
     <div class="field">
         <div class="ui checkbox">

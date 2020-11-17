@@ -1,5 +1,5 @@
 
-<div class="page-login ">
+<div class="page-login" >
     <div class="ui centered grid container">
       <div class="nine wide column">
         <div class="center aligned ui">
@@ -9,21 +9,21 @@
                 <img class="logo" src="assets/images/vimdos.png">
             </h1>
           </div>
-          <form class="ui form" >
+          <form class="ui form" [formGroup]="loginForm" (ngSubmit)="onSubmit()">
             <div class="field">
               <label>Username</label>
-              <input type="text" name="user" placeholder="Enter your username here" #user>
+              <input type="text" name="user" placeholder="Enter your username here" formControlName = "Username">
             </div>
             <div class="field">
               <label>Password</label>
-              <input type="password" name="pass" placeholder="Enter your password here" #pass>
+              <input type="password" name="pass" placeholder="Enter your password here" formControlName = "Password" >
             </div>
-            <button class="ui primary labeled icon button" (click) = "getDetails(user,pass)">
+            <button class="ui primary labeled icon button" type = "submit">
               <i class="unlock alternate icon"></i>
               Login
             </button>
             <a class="item" routerLink = "/register">
-              <button class="ui right floated primary labeled icon button" (click) = "getDetails(user,pass)">
+              <button class="ui right floated primary labeled icon button" >
                 <i class="pencil alternate icon"></i>
                   Register
               </button>
