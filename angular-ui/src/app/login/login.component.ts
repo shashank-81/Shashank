@@ -28,6 +28,7 @@ export class LoginComponent implements OnInit {
       this.loginForm.value.Username,
       this.loginForm.value.Password
     ).subscribe(result => {
+      console.log("=========================")
       console.log(result)
   })
   }
