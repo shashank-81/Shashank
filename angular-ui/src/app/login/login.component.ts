@@ -29,9 +29,15 @@ export class LoginComponent implements OnInit {
       this.loginForm.value.Username,
       this.loginForm.value.Password
     ).subscribe(result => {
-      this._router.navigate(['/student'])
       console.log("=========================")
       console.log(result)
+      if(result['status'] === 200){
+        localStorage.setItem('currentUser', JSON.stringify({'Username': this.loginForm.value.Username}))
+        this._router.navigate(['/student'])
+      }
+      else{
+        this._router.navigate(['/login'])
+      }
   })
   }
 

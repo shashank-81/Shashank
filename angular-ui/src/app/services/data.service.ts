@@ -53,14 +53,10 @@ export class DataService {
         return this.httpClient.post(`http://127.0.0.1:5000/changepass`,body)
     }
 
-    acc_det(FirstName, LastName, RollNo, EmailId, MobileNo, Password){
+    acc_det(EmailId){
         console.log('===============')
         const body = {
-            FirstName,
-            LastName,
-            RollNo,
-            EmailId,
-            MobileNo
+            EmailId
         }
         console.log('===============')
         return this.httpClient.post(`http://127.0.0.1:5000/acc_det` , body)

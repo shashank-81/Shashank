@@ -18,7 +18,7 @@ export class RegisterComponent implements OnInit {
       FirstName : new FormControl('' , [Validators.required]),
       LastName : new FormControl('', [Validators.required]),
       RollNo : new FormControl('', [Validators.required]),
-      EmialId : new FormControl('', [Validators.required]),
+      EmailId : new FormControl('', [Validators.required]),
       MobileNo : new FormControl('', [Validators.required]),
       Password :new FormControl('', [Validators.required])
     });
@@ -30,7 +30,7 @@ export class RegisterComponent implements OnInit {
       this.registrationForm.value.FirstName,
       this.registrationForm.value.LastName,
       this.registrationForm.value.RollNo,
-      this.registrationForm.value.EmialId,
+      this.registrationForm.value.EmailId,
       this.registrationForm.value.MobileNo,
       this.registrationForm.value.Password
     ).subscribe(result => {
