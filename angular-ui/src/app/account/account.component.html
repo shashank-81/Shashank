@@ -1,0 +1,76 @@
+<div class="ui container">
+    <div class="nine wide centered column">
+        <div class="ui vertical top fixed large menu content myclass">
+            <div class="ui center aligned header">
+                <a class="middle aligned content">
+                    <i class="user massive icon"></i>
+                </a>
+                <a class= "content">
+                    Sai Kiran Parimi
+                </a>
+            </div>
+            <div class="middle aligned content">
+                <a class="item" routerLink = "/student">
+                    Home
+                </a>
+                <a class="active item">
+                    Account Details
+                  </a>
+                <a class="item" routerLink = "/calendar">
+                    View Calendar
+                 </a>
+                <a class="item" routerLink = "/reset">
+                    Change Password
+                </a>
+                <a class="item" routerLink = "/login">
+                    Logout
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="page-login">
+        <div class="ui centered grid container">
+          <div class="nine wide column">
+            <div class="center aligned ui">
+              <div class="content">
+              <div class="header item borderless">
+                <h1 class="ui header centered">
+                    <img class="logo" src="assets/images/vimdos.png">
+                </h1>
+              </div>
+              <form class="ui form">
+                <div class="field">
+                    <label>First Name</label>
+                    <input type="text" name="first-name" placeholder="First Name" formControlName = "FirstName">
+                </div>
+                <div class="field">
+                    <label>Last Name</label>
+                    <input type="text" name="last-name" placeholder="Last Name" formControlName = "LastName">
+                </div>
+                <div class = "fields">
+                    <div class="eight wide field">
+                        <label>Roll Number</label>
+                        <input type="text" name="rollno[number]" maxlength="12" placeholder="Eg:160118733169" formControlName = "RollNo"> 
+                    </div>
+                    <div class="eight wide field">
+                        <label>Mobile No</label>
+                        <input type = "text" name = "mobileno" placeholder = "Eg.8181818181" formControlName = "MobileNo">
+                    </div>
+                </div>
+                <div class="field">
+                    <label>College Email ID</label>
+                    <input type = "email" name = "email" placeholder="Eg:abc@xyz.com" formControlName = "EmialId">
+                </div>
+                <div class="ui center aligned container">
+                    <button class="ui primary labeled icon button" >
+                        <i class="pencil alternate icon"></i>Edit Profile
+                    </button>
+                </div>
+              </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+</div>
+

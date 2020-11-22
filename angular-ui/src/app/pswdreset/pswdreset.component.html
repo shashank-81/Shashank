@@ -1,0 +1,68 @@
+<div class="nine wide centered column">
+    <div class="ui vertical top fixed large menu content myclass">
+        <div class="ui center aligned header">
+            <a class="middle aligned content">
+                <i class="user massive icon"></i>
+            </a>
+            <a class= "content">
+                Sai Kiran Parimi
+            </a>
+        </div>
+        <div class="middle aligned content">
+            <a class="item" routerLink = "/student">
+                Home
+            </a>
+            <a class="item" routerLink = "/account">
+                Account Details
+            </a>
+            <a class="item" routerLink = "/calendar">
+                View Calendar
+             </a>
+            <a class="active item">
+                Change Password
+            </a>
+            <a class="item" routerLink = "/login">
+                Logout
+            </a>
+        </div>
+    </div>
+</div>
+
+<div class="page-reset">
+    <div class="ui centered grid container">
+      <div class="nine wide column">
+        <div class="center aligned ui">
+          <div class="content">
+          <div class="header item borderless">
+            <h1 class="ui header centered">
+                <img class="logo" src="assets/images/vimdos.png">
+            </h1>
+          </div>
+          <form class="ui form myform">
+               <div class="field">
+                <div class="field">
+                    <label>Old Password</label>
+                    <input type="password" name="pass" placeholder="Enter your old password here" formControlName = "Password" >
+                  </div>
+                </div>
+                <div class="field">
+                    <label>New Password</label>
+                    <input type="password" name="pass" placeholder="Enter your new password here" formControlName = "Password" >
+                </div>
+                <div class="field">
+                    <label>Confirm New Password</label>
+                    <input type="password" name="pass" placeholder="Confirm your password here" formControlName = "Password" >
+                </div>
+                <div class="ui center aligned container">
+                    <button class="ui primary labeled icon button" type = "submit">
+                        <i class="unlock alternate icon"></i>
+                        Change Password
+                    </button>
+                </div>  
+          </form>
+          </div>
+        </div>
+       </div>
+    </div>
+</div>
+

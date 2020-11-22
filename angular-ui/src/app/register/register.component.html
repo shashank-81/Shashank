@@ -1,42 +1,61 @@
-<form class="ui form" [formGroup]="registrationForm" (ngSubmit)="onSubmit()">
-    <div class="field">
-      <label>First Name</label>
-      <input type="text" name="first-name" placeholder="First Name" formControlName = "FirstName">
-    </div>
-    <div class="field">
-      <label>Last Name</label>
-      <input type="text" name="last-name" placeholder="Last Name" formControlName = "LastName">
-    </div>
-    <div class = "fields">
-        <div class="six wide field">
-            <label>Roll Number</label>
-            <input type="text" name="rollno[number]" maxlength="12" placeholder="Eg:160118733169" formControlName = "RollNo"> 
-        </div>
-        <div class="six wide field">
-            <label>Colege Email ID</label>
-            <input type = "email" name = "email" placeholder="Eg:abc@xyz.com" formControlName = "EmialId">
-        </div>
-        <div class="six wide field">
-            <label>Mobile No</label>
-            <input type = "text" name = "mobileno" placeholder = "Eg.8181818181" formControlName = "MobileNo">
-        </div>
-    </div>
-    <div class="field">
-        <label>Enter Password</label>
-        <input type = "password" name = "pswd" placeholder = "Enter Password">
-    </div>
-    <div class="field">
-        <label>Confirm Password</label>
-        <input type = "password" name = "pswd" placeholder = "Confirm Password" formControlName = "Password">
-    </div>
-    <div class="field">
-        <div class="ui checkbox">
-            <input type="checkbox">
-            <label>I agree to the terms and conditions</label>
+<div class="page-register">
+    <div class="ui centered grid container">
+      <div class="nine wide column">
+        <div class="center aligned ui">
+          <div class="content">
+          <div class="header item borderless">
+            <h1 class="ui header centered">
+                <img class="logo" src="assets/images/vimdos.png">
+            </h1>
           </div>
+          <form class="ui form myform" [formGroup]="registrationForm" (ngSubmit)="onSubmit()">
+                <div class="field">
+                    <label>First Name</label>
+                    <input type="text" name="first-name" placeholder="First Name" formControlName = "FirstName">
+                </div>
+                <div class="field">
+                    <label>Last Name</label>
+                    <input type="text" name="last-name" placeholder="Last Name" formControlName = "LastName">
+                </div>
+                <div class = "fields">
+                    <div class="eight wide field">
+                        <label>Roll Number</label>
+                        <input type="text" name="rollno[number]" maxlength="12" placeholder="Eg:160118733169" formControlName = "RollNo"> 
+                    </div>
+                    <div class="eight wide field">
+                        <label>Mobile No</label>
+                        <input type = "text" name = "mobileno" placeholder = "Eg.8181818181" formControlName = "MobileNo">
+                    </div>
+                </div>
+                <div class="field">
+                    <label>College Email ID</label>
+                    <input type = "email" name = "email" placeholder="Eg:abc@xyz.com" formControlName = "EmialId">
+                </div>
+                <div class="field">
+                    <label>Enter Password</label>
+                    <input type = "password" name = "pswd" placeholder = "Enter Password">
+                </div>
+                <div class="field">
+                    <label>Confirm Password</label>
+                    <input type = "password" name = "pswd" placeholder = "Confirm Password" formControlName = "Password">
+                </div>
+                <div class="ui center aligned container">
+                    <div class="field">
+                        <div class="ui checkbox">
+                            <input type="checkbox">
+                            <label>I agree to the terms and conditions</label>
+                            <br>
+                        </div>
+                    </div>
+                </div>
+                <div class="ui center aligned container">
+                    <button class="ui primary labeled icon button" >
+                        <i class="pencil alternate icon"></i>Submit
+                    </button>
+                </div>
+             </form>
+            </div>
+            </div>
+        </div>
     </div>
-    <div class="center aligned field">
-        <button class="ui button" type="submit">Submit</button>
-    </div>
-    
-  </form>
+</div>
