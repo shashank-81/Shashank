@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { DataService } from 'src/app/services/data.service';
+import { CanActivate, Router } from '@angular/router';
 
 @Component({
   selector: 'app-register',
@@ -10,7 +11,7 @@ import { DataService } from 'src/app/services/data.service';
 export class RegisterComponent implements OnInit {
   registrationForm : FormGroup;
 
-  constructor( private dataService : DataService) {}
+  constructor( private dataService : DataService, private _router: Router) {}
 
   ngOnInit() {
     this.registrationForm = new FormGroup({ 
@@ -33,6 +34,7 @@ export class RegisterComponent implements OnInit {
       this.registrationForm.value.MobileNo,
       this.registrationForm.value.Password
     ).subscribe(result => {
+      this._router.navigate(['/login'])
       console.log(result)
     })
   }  

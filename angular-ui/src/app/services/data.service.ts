@@ -1,6 +1,5 @@
-import { Injectable } from '@angular/core'
-
-import { HttpClient , HttpHeaders } from '@angular/common/http'
+import { Injectable } from '@angular/core';
+import { HttpClient , HttpHeaders } from '@angular/common/http';
 
 
 @Injectable({
@@ -18,51 +17,69 @@ export class DataService {
         return headers;
     };
 
-    registration(FirstName, LastName, RollNo, EmialId, MobileNo, Password){
+    registration(FirstName, LastName, RollNo, EmailId, MobileNo, Password){
         console.log('===============')
         const body = {
             FirstName,
             LastName,
             RollNo,
-            EmialId,
+            EmailId,
             MobileNo,
             Password
         }
         console.log('===============')
+
         return this.httpClient.post(`http://127.0.0.1:5000/signup` , body)
-    };
+    }
 
     login(Username, Password){
 
         const body = {
-          'EmialId' : Username,
+          'EmailId' : Username,
           'Password' : Password
         }
         return this.httpClient.post(`http://127.0.0.1:5000/login`,body)
 
     }
 
+    changepass(Username,Password,newpass,c_newpass){
 
+        const body= {
+            'EmailId' : Username,
+            'Password' : Password,
+            'New Password' : newpass,
+            'Confirm New Password' : c_newpass
+        }
+        return this.httpClient.post(`http://127.0.0.1:5000/changepass`,body)
+    }
 
+    acc_det(FirstName, LastName, RollNo, EmailId, MobileNo, Password){
+        console.log('===============')
+        const body = {
+            FirstName,
+            LastName,
+            RollNo,
+            EmailId,
+            MobileNo
+        }
+        console.log('===============')
+        return this.httpClient.post(`http://127.0.0.1:5000/acc_det` , body)
+    }
 
+    doubt(Subject, Topic, checked){
+        const body = {
+            'Subject' : Subject,
+            'Topic': Topic,
+            'checked': checked
+        }
+        return this.httpClient.post(`http://127.0.0.1:5000/doubt` , body)
+    }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    verification(OTP){
+        const body = {
+            'OTP': OTP
+        }
+        return this.httpClient.post(`http://127.0.0.1:5000/verification` , body)
+    }
 
 }

@@ -38,7 +38,7 @@
                     <img class="logo" src="assets/images/vimdos.png">
                 </h1>
               </div>
-              <form class="ui form">
+              <form class="ui form" [formGroup]="editForm" (ngSubmit)="onSubmit()">
                 <div class="field">
                     <label>First Name</label>
                     <input type="text" name="first-name" placeholder="First Name" formControlName = "FirstName">
