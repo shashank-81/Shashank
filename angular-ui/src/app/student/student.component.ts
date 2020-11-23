@@ -1,4 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { DataService } from 'src/app/services/data.service';
+import { CanActivate, Router } from '@angular/router';
+
 
 @Component({
   selector: 'app-student',
@@ -6,15 +10,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./student.component.css']
 })
 export class StudentComponent implements OnInit {
+  doubtform : FormGroup
+  constructor(private dataService : DataService , private _router: Router) { }
+
   subjects: String[];
   selectedtopic: String;
   selectedsubtopic: String;
   subtopics: String[];
-  
-   
+  description: String;
 
-  constructor() { }
-  
   ngOnInit(): void {
     this.subjects = ["OS", "DAA", "FLAT"];
    
@@ -36,6 +40,22 @@ export class StudentComponent implements OnInit {
         this.subtopics = ["Pushdown Automata","State Diagram","Turing Machine"];
     }
   }
-    
+
+  onupload(){
+    console.log(this.doubtform)
+    this.dataService.doubt(
+      this.selectedtopic,
+      this.selectedsubtopic,
+      this.description
+
+    ).subscribe(result=>{
+      console.log(result)
+      this._router.navigate(['/account'])
+      alert("Doubt added successfully")
+
+
+    })
+  }
+
 
 }

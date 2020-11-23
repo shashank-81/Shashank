@@ -28,7 +28,7 @@
             </div>
         </div>
     </div>
-    <div class="nine wide centered column myclass2">
+    <div class="nine wide centered column myclass2" >
         <div class="ui card supercard">
             <div class="ui center aligned header myclass2">
                 <a class= "content myclass2">
@@ -43,7 +43,7 @@
                 </div>
                 <div class="row">
                     <div class="ui compact menu">
-                          <select [(ngModel)] = "selectedtopic" (ngModelChange) = "onSubjectSelected($event)">
+                          <select [(ngModel)] = "selectedtopic" (ngModelChange) = "onSubjectSelected($event)" >
                               <option>--Select--</option>
                               <option *ngFor = "let subject of subjects" [value]="subject">{{subject}}</option>
                           </select>
@@ -58,22 +58,25 @@
                     <div class="ui compact menu">
                         <select [(ngModel)] = "selectedsubtopic">
                             <option value="0">--Select--</option>
-                            <option *ngFor = "let subtopic of subtopics">{{subtopic}}</option>
+                            <option *ngFor = "let subtopic of subtopics" >{{subtopic}}</option>
                         </select>
                     </div>
                 </div>
             </div>
                 <div class="ui center aligned header">
                     <a class= "content myclass2">
-                        Upload your doubt below
+                        Description of your doubt
                     </a>
                     
                 </div>
                 <div class="ui center aligned container">
-                       &nbsp;<input type="file" accept="image/*">      
+                    <div class="field">
+                        <textarea cols="30" rows="5" [(ngModel)] = "description"></textarea >
+                    </div>
+    
                 </div> 
                 <div class="ui center aligned header">
-                    <button class="ui primary button">
+                    <button class="ui primary button" (click) = "onupload()">
                         Upload
                       </button>          
                 </div>       

@@ -62,11 +62,11 @@ export class DataService {
         return this.httpClient.post(`http://127.0.0.1:5000/acc_det` , body)
     }
 
-    doubt(Subject, Topic, checked){
+    doubt(Subject, Topic, description){
         const body = {
             'Subject' : Subject,
             'Topic': Topic,
-            'checked': checked
+            'Description': description
         }
         return this.httpClient.post(`http://127.0.0.1:5000/doubt` , body)
     }

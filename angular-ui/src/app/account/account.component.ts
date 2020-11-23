@@ -33,11 +33,11 @@ export class AccountComponent implements OnInit {
     this.dataService.acc_det(this.currentUser['Username']).subscribe( result => {
       
       
-      this.emailId = result.EmailId;
-      this.firstName = result.FirstName;
-      this.lastName = result.LastName;
-      this.mobile = result.MobileNo;
-      this.rollNo = result.RollNo;
+      this.emailId = result['EmailId'];
+      this.firstName = result['FirstName'];
+      this.lastName = result['LastName'];
+      this.mobile = result['MobileNo'];
+      this.rollNo = result['RollNo'];
 
 
       console.log(result)
