@@ -7,6 +7,7 @@ import { StudentComponent } from './student/student.component';
 import {AccountComponent} from './account/account.component'; 
 import {PswdresetComponent} from './pswdreset/pswdreset.component';
 import {CalendarComponent} from './calendar/calendar.component';
+import {FacultyComponent} from './faculty/faculty.component';
 const routes: Routes = [
   {path:'', redirectTo: '/login', pathMatch: 'full'},
   {path: 'login', component: LoginComponent},
@@ -15,7 +16,9 @@ const routes: Routes = [
   {path: 'student', component: StudentComponent},
   {path: 'account', component: AccountComponent},
   {path: 'reset', component: PswdresetComponent},
-  {path: 'calendar', component: CalendarComponent}
+  {path: 'calendar', component: CalendarComponent},
+  {path: 'faculty', component: FacultyComponent}
+
 ];
 
 @NgModule({
@@ -23,4 +26,4 @@ const routes: Routes = [
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
-export const routingComponents = [LoginComponent, RegisterComponent, VerificationComponent, StudentComponent, AccountComponent, PswdresetComponent, CalendarComponent]
+export const routingComponents = [LoginComponent, RegisterComponent, VerificationComponent, StudentComponent, AccountComponent, PswdresetComponent, CalendarComponent, FacultyComponent]

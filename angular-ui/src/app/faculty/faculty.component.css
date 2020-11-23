@@ -1,0 +1,31 @@
+.ui.menu.myclass
+{
+    background-color: #66b7d1;
+}
+
+.ui.card
+{
+  margin-top: 40%;
+}
+
+.ui.card.header.content
+{
+    margin-top: 20%;
+}
+
+.ui.myclass2
+{
+    margin: 10%;
+}
+
+.ui.supercard
+{
+    width: 100%;
+}
+
+.ui.inputbox
+{
+    align-items: center;
+    margin: 20%;
+}
+
