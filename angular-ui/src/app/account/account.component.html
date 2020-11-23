@@ -41,25 +41,25 @@
               <form class="ui form" [formGroup]="editForm" (ngSubmit)="onSubmit()">
                 <div class="field">
                     <label>First Name</label>
-                    <input type="text" name="first-name" placeholder="First Name" formControlName = "FirstName">
+                    <input type="text" name="first-name" value = "{{firstName}}" placeholder="First Name" formControlName = "FirstName" disabled>
                 </div>
                 <div class="field">
                     <label>Last Name</label>
-                    <input type="text" name="last-name" placeholder="Last Name" formControlName = "LastName">
+                    <input type="text" name="last-name" value = "{{lastName}}" placeholder="Last Name" formControlName = "LastName" disabled>
                 </div>
                 <div class = "fields">
                     <div class="eight wide field">
                         <label>Roll Number</label>
-                        <input type="text" name="rollno[number]" maxlength="12" placeholder="Eg:160118733169" formControlName = "RollNo"> 
+                        <input type="text" name="rollno[number]" value = "{{rollNo}}" maxlength="12" placeholder="Eg:160118733169" formControlName = "RollNo" disabled> 
                     </div>
                     <div class="eight wide field">
                         <label>Mobile No</label>
-                        <input type = "text" name = "mobileno" placeholder = "Eg.8181818181" formControlName = "MobileNo">
+                        <input type = "text" name = "mobileno" value = "{{mobile}}" placeholder = "Eg.8181818181" formControlName = "MobileNo" disabled>
                     </div>
                 </div>
                 <div class="field">
                     <label>College Email ID</label>
-                    <input type = "email" name = "email" placeholder="Eg:abc@xyz.com" formControlName = "EmailId">
+                    <input type = "email" name = "email" value = "{{emailId}}"placeholder="Eg:abc@xyz.com" formControlName = "EmailId" disabled>
                 </div>
                 <div class="ui center aligned container">
                     <button class="ui primary labeled icon button" >
