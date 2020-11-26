@@ -50,7 +50,8 @@ export class StudentComponent implements OnInit {
 
     ).subscribe(result=>{
       console.log(result)
-      this._router.navigate(['/account'])
+      window.location.reload()
+      //this._router.navigate(['/account'])
       alert("Doubt added successfully")
 
 
